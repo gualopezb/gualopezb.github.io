@@ -1,0 +1,183 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+$font-color: #9ddcff;
+$p-font-color: #666;
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  background: #2e7bcf;
+
+  h1 {
+    flex: 1 100%;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  nav {
+    flex: 1 100%;
+    ul {
+      margin-bottom: 0;
+      li {
+        list-style: none;
+
+        a {
+          font-size: 25px;
+          color: $font-color;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 20px;
+
+  #profile-picture {
+    img {
+      width: 250px;
+    }
+  }
+
+  #profile-picture-desktop {
+    display: none;
+  }
+
+  .post-title {
+    margin-bottom: 0;
+  }
+
+  .post-date {
+    margin-top: 0;
+  }
+
+  .post-summary {
+    color: $p-font-color;
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+    font-size: 2.8em;
+    font-weight: normal;
+    color: #474747;
+    text-indent: 6px;
+    letter-spacing: -1px;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+    font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #474747;
+    text-indent: 4px;
+  }
+
+  p {
+    text-align: justify;
+  }
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 0;
+  padding: 20px 20px;
+
+  p {
+    flex: 1 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 520px) {
+  header nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    // flex container
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+    header {
+      // flex container
+      display: flex;
+      flex-flow: column nowrap;
+
+      // flex item
+      flex: 30%;
+
+      h1 {
+        // flex item
+        flex: 0;
+        align-self: center;
+        width: 85%;
+        font-size: 32px;
+      }
+
+      nav {
+        // flex item
+        flex: 0;
+        ul {
+          // flex container
+          display: flex;
+          flex-flow: column nowrap;
+          margin-top: 40px;
+
+          li {
+            margin: 10px 50px;
+            a {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    .right-content {
+      // flex container
+      display: flex;
+      flex-flow: column wrap;
+
+      // flex item
+      flex: 70%;
+
+      main {
+        padding: 30px 50px;
+        max-width: 700px;
+        margin: 0 auto;
+
+        #profile-picture {
+          display: none;
+        }
+
+        #profile-picture-desktop {
+          display: block;
+          width: 30%;
+          float: right;
+          margin-left: 35px;
+          max-width: 170px;
+        }
+      }
+      footer {
+        padding: 30px 50px;
+      }
+    }
+  }
+}

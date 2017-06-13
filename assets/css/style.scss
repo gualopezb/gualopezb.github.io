@@ -12,10 +12,13 @@ header {
   flex-flow: row wrap;
   background: #2e7bcf;
 
-  h1 {
+  .title-name {
     flex: 1 100%;
-    font-size: 25px;
     text-align: center;
+
+    h1 {
+      font-size: 25px;
+    }
   }
 
   nav {
@@ -128,32 +131,30 @@ footer {
 
 @media (min-width: 768px) {
   body {
-    // flex container
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
 
     header {
-      // flex container
       display: flex;
       flex-flow: column nowrap;
 
-      // flex item
       flex: 30%;
 
-      h1 {
-        // flex item
+      .title-name {
         flex: 0;
         align-self: center;
         width: 85%;
-        font-size: 32px;
+
+        h1 {
+          width: 100%;
+          font-size: 32px;
+        }
       }
 
       nav {
-        // flex item
         flex: 0;
         ul {
-          // flex container
           display: flex;
           flex-flow: column nowrap;
           margin-top: 40px;
@@ -169,11 +170,8 @@ footer {
     }
 
     .main-content {
-      // flex container
       display: flex;
       flex-flow: column wrap;
-
-      // flex item
       flex: 70%;
 
       main {
@@ -193,6 +191,7 @@ footer {
           max-width: 170px;
         }
       }
+
       footer {
         padding: 30px 50px;
       }

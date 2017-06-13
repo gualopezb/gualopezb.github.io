@@ -12,6 +12,14 @@ header {
   flex-flow: row wrap;
   background: #2e7bcf;
 
+  a {
+    color: #fff;
+
+    &:hover {
+      color: #9ddcff;
+    }
+  }
+
   .title-name {
     flex: 1 100%;
     text-align: center;
@@ -30,7 +38,6 @@ header {
 
         a {
           font-size: 25px;
-          color: $font-color;
         }
       }
     }
@@ -50,6 +57,10 @@ header {
     a {
       font-size: 40px;
       color: #fff;
+
+      &:hover {
+        color: #9ddcff;
+      }
     }
   }
 }

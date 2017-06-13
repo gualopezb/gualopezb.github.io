@@ -16,7 +16,7 @@ header {
     color: #fff;
 
     &:hover {
-      color: #9ddcff;
+      color: $font-color;
     }
   }
 
@@ -39,6 +39,10 @@ header {
         a {
           font-size: 25px;
         }
+
+        &.active a {
+          color: $font-color;
+        }
       }
     }
   }
@@ -59,7 +63,7 @@ header {
       color: #fff;
 
       &:hover {
-        color: #9ddcff;
+        color: $font-color;
       }
     }
   }

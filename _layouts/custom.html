@@ -20,10 +20,10 @@
       <a href="/" class="title-name"><h1>{{ site.title }}</h1></a>
       <nav>
         <ul>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li {% if page.url == '/blog.html' %}class="active"{% endif %}><a href="/blog">Blog</a></li>
+          <li {% if page.url == '/about.html' %}class="active"{% endif %}><a href="/about">About me</a></li>
+          <li {% if page.url == '/work.html' %}class="active"{% endif %}><a href="/work">Work</a></li>
+          <li {% if page.url == '/contact.html' %}class="active"{% endif %}><a href="/contact">Contact</a></li>
         </ul>
       </nav>
 
